@@ -37,9 +37,8 @@ var SetSources = []Source{
 	// 	SoldOutText: `<p class="date">限定盤の為完売しております。申し訳ございませんがご注文いただけません。</p>`,
 	// },
 	{
-		Name:        "トイザらス: Nintendo Switch スプラトゥーン2 セット",
-		URL:         "https://www.toysrus.co.jp/s/dsg-580782400",
-		SoldOutText: `<span id="isStock_a">在庫あり</span>`,
-		// AvailableText: `<span id="isStock_a">在庫あり</span>`,
+		Name:          "トイザらス: Nintendo Switch スプラトゥーン2 セット",
+		URL:           "https://www.toysrus.co.jp/s/dsg-580782400",
+		AvailableText: `<span id="isStock_a">在庫あり</span>`,
 	},
 }
