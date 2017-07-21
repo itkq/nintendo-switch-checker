@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/haya14busa/nintendo-switch-checker/nschecker"
+	"github.com/itkq/nintendo-switch-checker/nschecker"
 )
 
 var (
@@ -131,7 +131,7 @@ func (c *Checker) run() error {
 func (c *Checker) runChecks() {
 	log.Println("Run checkers")
 	var wg sync.WaitGroup
-	for _, s := range nschecker.Sources {
+	for _, s := range nschecker.SetSources {
 		wg.Add(1)
 		go func(s nschecker.Source) {
 			defer wg.Done()

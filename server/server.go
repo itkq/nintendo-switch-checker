@@ -23,7 +23,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 	hc := urlfetch.Client(ctx)
 	var wg sync.WaitGroup
-	for _, s := range nschecker.Sources {
+	for _, s := range nschecker.SetSources {
 		// Yodobashi and Joshin does not work on GAE.
 		// https://github.com/haya14busa/nintendo-switch-checker/pull/3#issuecomment-309968587
 		if strings.HasPrefix(s.URL, "http://www.yodobashi.com") ||
