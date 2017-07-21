@@ -36,4 +36,10 @@ var SetSources = []Source{
 	// 	URL:         "http://www.hmv.co.jp/artist_Game-Hard_000000000119544/item_Nintendo-Switch-%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B32%E3%82%BB%E3%83%83%E3%83%88_7916445",
 	// 	SoldOutText: `<p class="date">限定盤の為完売しております。申し訳ございませんがご注文いただけません。</p>`,
 	// },
+	{
+		Name:        "トイザらス: Nintendo Switch スプラトゥーン2 セット",
+		URL:         "https://www.toysrus.co.jp/s/dsg-580782400",
+		SoldOutText: `<span id="isStock_a">在庫あり</span>`,
+		// AvailableText: `<span id="isStock_a">在庫あり</span>`,
+	},
 }
