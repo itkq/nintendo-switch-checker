@@ -131,7 +131,7 @@ func (c *Checker) run() error {
 func (c *Checker) runChecks() {
 	log.Println("Run checkers")
 	var wg sync.WaitGroup
-	for _, s := range nschecker.SetSources {
+	for _, s := range nschecker.Sources {
 		wg.Add(1)
 		go func(s nschecker.Source) {
 			defer wg.Done()
