@@ -173,6 +173,7 @@ type slackWebhookRequest struct {
 	Username string `json:"username"`
 	Text     string `json:"text"`
 	Color    string `json:"color"`
+	Title    string `json:"title"`
 }
 
 func (n *SlackWebhookNotifier) Notify(state State, s Source) error {
@@ -195,7 +196,7 @@ func (n *SlackWebhookNotifier) Notify(state State, s Source) error {
 	if state == AVAILABLE {
 		channel = "<!channel|channel> "
 	}
-	msg := fmt.Sprintf("%s[%v] %v (%v)", channel, state, s.URL, s.Name)
+	msg := fmt.Sprintf("%s<%v|%v>", channel, s.URL, s.Name)
 	return n.SendMessage(msg, state)
 }
 
@@ -206,6 +207,7 @@ func (n *SlackWebhookNotifier) SendMessage(msg string, state State) error {
 		Username: "switch-checker",
 		Text:     msg,
 		Color:    state.ColorString(),
+		Title:    state.String(),
 	})
 	wrappedReq := &slackWebhookWrapper{
 		Attachments: req,
